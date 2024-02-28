@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div id="Switch" style="background-color: antiquewhite;height: 300px;width: 400px;margin-left:50px;">
+          <p style="text-align:center;"><b>Calculator</b></p>   
+         <input type="text"style="margin-left:20px;margin-top:25px;"  id="result">
+         <button onclick="increment()">+</button>
+        <button onclick="decrement()">-</button>
+        <button onclick="changeD()">Dark</button>
+        <button onclick="changeW()">White</button><br>
+        <button onclick="one()"style="margin-left:25px;margin-top:25px;"id="1" value="1">1</button>
+        <button onclick="two()">2</button>
+        <button onclick="three()">3</button><br>
+        <button onclick="four()"style="margin-left:25px;margin-top:15px;">4</button>
+        <button onclick="five()">5</button>
+        <button onclick="six()">6</button><br>
+        <button onclick="zero()"style="margin-left:25px;margin-top:15px;">0</button>
+        <button onclick="plus()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="multiplication()">*</button>
+        <button onclick="divide()">/</button>
+        <button onclick="evaluate1()">=</button>
+        <button onclick="clearsc()">clear</button>
+        </div>
+    
+        <script >
+            function increment(){
+             document.getElementById("result").value++
+            }
+            function decrement(){
+                document.getElementById("result").value--
+            }
+            
+            function changeD(){
+                document.getElementById("Switch").style.backgroundColor='black';
+                document.getElementById("result").style.color='red';
+            }
+            function changeW(){
+                document.getElementById("Switch").style.backgroundColor='white';
+                document.getElementById("result").style.color='green';
+            }
+            function one(){
+                document.getElementById("result").value +="1";
+            }
+            function two(){
+                document.getElementById("result").value +="2";
+            }
+            function three(){
+                document.getElementById("result").value +="3";
+            }
+            function four(){
+                document.getElementById("result").value +="4";
+            }
+            function five(){
+                document.getElementById("result").value +="5";
+            }
+            function six(){
+                document.getElementById("result").value +="6";
+            }
+            function plus(){
+                document.getElementById("result").value +="+";
+            }
+            function minus(){
+                document.getElementById("result").value +="-";
+            
+            }
+            function mulitiplication(){
+                document.getElementById("result").value +="*";
+            
+            }
+            function divide(){
+                document.getElementById("result").value +="/";
+            
+            }
+            
+            function clearsc(){
+                document.getElementById("result").value=" ";
+            }
+            function evaluate1(){
+                document.getElementById("result").value=eval(document.getElementById("result").value)
+            }
+        </script>
+    </body>
+</html>
